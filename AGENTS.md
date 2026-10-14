@@ -15,6 +15,57 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
+# COMP2120 A5 fork coordination
+
+This section applies to `u8026876/comp2120-gyg-a5`. Use its
+[GitHub Issues](https://github.com/u8026876/comp2120-gyg-a5/issues) as the shared
+record of work for group members and their agents. Keep this fork's coordination
+changes out of patches and pull requests intended for Apache Tika.
+
+## Before starting or resuming work
+
+1. Confirm the human member you are helping and the requested task. Clarify an
+   ambiguous request before making a claim or changing the task's scope.
+2. Read the current open issues and the relevant issue's body, assignees, and
+   latest comments. Check linked branches and PRs; local chat history alone is
+   not current team state. Re-read when resuming and before overlapping edits.
+3. Reuse a matching issue or open one with the **A5 work claim** form. Record one
+   accountable human owner, helpers, scope, affected modules/files, completion
+   criteria, status, and any upstream ticket and branch/PR links. The human owner
+   must agree to the claim; an agent is not the accountable owner.
+4. Assign the owner when permissions allow. Otherwise, the Owner field and an
+   explicit claim comment record ownership until a collaborator can assign it.
+   Re-check for a competing claim before implementing. Agree a split or handoff
+   with the existing owner before touching overlapping work.
+5. If live issue access is unavailable, explain that limitation and prepare the
+   claim or update for the human to post. Do not report a saved draft as posted
+   or invent current ownership. Resolve overlapping ownership before proceeding.
+
+## Progress and handoffs
+
+- Use `Proposed`, `Working`, `Blocked`, or `Ready for review` in the issue's Status
+  field. Keep that field current; use comments for the dated history and latest
+  next step. Record scope changes before starting the changed work.
+- Add a short update when work meaningfully changes and when ending a work
+  session: what changed, exact checks and results, branch/commit/PR links,
+  blockers, and the next action. Identify agent-assisted updates and their human
+  owner. Do not post credentials, private local paths, or private course material.
+- Keep blocked work open. At handoff, state the outgoing owner, agreed incoming
+  owner, remaining work, and relevant evidence. Close an issue after its stated
+  completion criteria are met and the responsible human has reviewed the result.
+- A claim here records our group's plan; it does not reserve an upstream Tika
+  ticket or prove tutor approval, passing CI, acceptance, or a merged upstream PR.
+
+## Authorization and upstream guidance
+
+Read the development skill below. Its default ban on GitHub writes may be
+overridden by an explicit human request to claim or update that human's A5 work
+in this fork. That permission is limited to the named task and repository; this
+file alone does not grant permission to post. Keep other workflow defaults unless
+the human has already authorized the specific action, including commits, pushes,
+upstream comments/PRs, merges, or assessed submissions. Preserve Tika's code,
+testing, and security conventions.
+
 # Agent Guidance for Apache Tika
 
 Detailed guidance lives in **`.skills/`** — `devs/` for working on Tika,

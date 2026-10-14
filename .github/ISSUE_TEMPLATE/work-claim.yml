@@ -1,0 +1,88 @@
+name: A5 work claim
+description: Declare a bounded task, its owner, progress, and completion evidence.
+title: "[A5] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use one issue per task. Search open issues before posting; comment on an
+        existing task instead of claiming the same work twice. The named human
+        owner must agree to the claim. Assign that owner in the sidebar if possible.
+
+        Keep Status current and add progress/handoff comments. Group members and
+        agents should read the issue and latest comments before starting or resuming.
+        This claim does not reserve an upstream Tika ticket.
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: One accountable human member's GitHub username; use your own for a self-claim.
+      placeholder: "@your-github-username"
+    validations:
+      required: true
+  - type: input
+    id: helpers
+    attributes:
+      label: Helpers
+      description: Optional collaborators and their agreed roles. Agents act for a named human owner.
+      placeholder: "@helper - independent regression review"
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Proposed until claimed; Working when starting. Update this field as work changes.
+      options:
+        - Proposed
+        - Working
+        - Blocked
+        - Ready for review
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and affected files
+      description: State the concrete task, modules/files likely to change, and what is outside its scope.
+      placeholder: "Describe your bounded task and any overlap agreed with another owner."
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: List observable completion criteria and the tests, review, or other evidence needed.
+      placeholder: |
+        - [ ] Deliverable is ready for review.
+        - [ ] Relevant checks and their actual results are linked.
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Related issues, branch, and PR
+      description: Link the upstream Tika ticket, related group issues, working branch, and PR when available. Write N/A or pending where appropriate.
+      placeholder: |
+        Upstream ticket:
+        Related group issues:
+        Branch (for example, a5/12-short-task-name):
+        PR:
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: Next step and blockers
+      description: What happens next, who does it, and what must be resolved first? An optional target date can go here.
+      placeholder: "Next action, dependencies, and any ownership or access blockers."
+    validations:
+      required: true
+  - type: checkboxes
+    id: coordination
+    attributes:
+      label: Coordination check
+      options:
+        - label: I checked open issues and agreed any overlapping work with its current owner.
+          required: true
+        - label: The named human owner agrees to this claim; this issue does not claim upstream reservation or approval.
+          required: true

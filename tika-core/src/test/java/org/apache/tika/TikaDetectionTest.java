@@ -17,13 +17,77 @@
 package org.apache.tika;
 
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class TikaDetectionTest {
 
     private final Tika tika = new Tika();
+
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "Lorem-Ipsum.csv",
+            "Lorem-Ipsum#123.csv",
+            "Lorem-Ipsum#.csv",
+            "Lorem-Ipsum#123.CSV",
+            "Lorem-Ipsum.v1#123.csv",
+            "Lorem-Ipsum#123#456.csv",
+            "ABC#192.168.0.1#2.csv",
+            "documents/Lorem-Ipsum#123.csv",
+            "/documents/Lorem-Ipsum#123.csv",
+            "C:\\documents\\Lorem-Ipsum#123.csv",
+            "Lorem Ipsum#123.csv",
+            "Lorem-Ipsum%23123.csv"
+    })
+    public void testCsvFileNamesWithNumberSigns(String name) {
+        byte[] data = "Lorem;Ipsum;\n1;2;\n3;4;\n".getBytes(UTF_8);
+        assertEquals("text/csv", tika.detect(data, name), name);
+        assertEquals("text/csv", tika.detect(name), name);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "report.txt#section.csv, text/csv",
+            "https://example.test/report.txt#section.csv, text/plain",
+            "report.csv#section.txt, text/plain",
+            "https://example.test/report.csv#section.txt, text/csv",
+            "report.txt#section%2Ecsv, text/plain",
+            "report.csv#section%2Etxt, text/csv",
+            "report.txt?download=1#section.csv, text/plain",
+            "report.txt#section.csv?download=1, text/csv",
+            "report.csv#section?download=.txt, text/csv",
+            "https://example.test/data.csv#section, text/csv",
+            "https://example.test/data.csv?download=1#section.txt, text/csv",
+            "https://example.test/Lorem-Ipsum%23123.csv, text/csv",
+            "http://example.test/data.csv#section.txt, text/csv",
+            "ftp://example.test/data.csv#section.txt, text/csv",
+            "file:///documents/data.csv#section.txt, text/csv",
+            "//example.test/data.csv#section.txt, text/csv",
+            "data.csv#section, text/csv",
+            "data.csv?download=1#section, text/csv"
+    })
+    public void testDetectionWithAmbiguousResourceNames(String name, String expected) {
+        byte[] data = "Lorem;Ipsum;\n1;2;\n3;4;\n".getBytes(UTF_8);
+        assertEquals(expected, tika.detect(data, name), name);
+        assertEquals(expected, tika.detect(name), name);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "https://example.test/report.php#section.csv, text/plain, application/octet-stream",
+            "ftp://example.test/report.php#section.csv, text/x-php, text/x-php"
+    })
+    public void testInterpretedResourceNamesWithFragments(String name, String withContent,
+                                                        String withoutContent) {
+        byte[] data = "Lorem;Ipsum;\n1;2;\n3;4;\n".getBytes(UTF_8);
+        assertEquals(withContent, tika.detect(data, name), name);
+        assertEquals(withoutContent, tika.detect(name), name);
+    }
 
     /**
      * This test checks that Tika correctly detects all the file extensions

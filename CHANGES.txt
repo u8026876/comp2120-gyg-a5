@@ -1,5 +1,8 @@
 Release 4.2.0 - unreleased
 
+   * Preserve number signs before extensions in local filename hints during MIME
+     detection (TIKA-4431).
+
    * The docx parser wraps OMML equations (m:oMath) in <span class="omml">, their
      text flattened to plain characters; it was previously emitted as unmarked body
      text (TIKA-4968).

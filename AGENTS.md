@@ -22,6 +22,20 @@ This section applies to `u8026876/comp2120-gyg-a5`. Use its
 record of work for group members and their agents. Keep this fork's coordination
 changes out of patches and pull requests intended for Apache Tika.
 
+## A5 review policy
+
+Read [A5_REVIEW_POLICY.md](./A5_REVIEW_POLICY.md) when starting or resuming
+work. One approving review from another human group member is sufficient before
+merging a contribution or submitting it upstream. The author cannot approve
+their own work; an agent's checks alone do not count as another human review.
+Record the reviewer, reviewed commit or diff, scope, and outcome in the issue or
+PR. Group PRs may be opened to request that review.
+
+No majority-group review, tutor review, or tutor approval is required for any A5
+issue or contribution. This policy supersedes older review requirements in
+issues, PRs, comments, handoffs, and chat history. Check the current policy on
+the fork's `main` branch if a feature branch contains older guidance.
+
 ## Before starting or resuming work
 
 1. Confirm the human member you are helping and the requested task. Clarify an
@@ -54,7 +68,7 @@ changes out of patches and pull requests intended for Apache Tika.
   owner, remaining work, and relevant evidence. Close an issue after its stated
   completion criteria are met and the responsible human has reviewed the result.
 - A claim here records our group's plan; it does not reserve an upstream Tika
-  ticket or prove tutor approval, passing CI, acceptance, or a merged upstream PR.
+  ticket or prove passing CI, acceptance, or a merged upstream PR.
 
 ## Authorization and upstream guidance
 

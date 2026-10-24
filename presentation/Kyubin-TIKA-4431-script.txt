@@ -1,0 +1,25 @@
+TIKA-4431 — Kyubin Park
+Separate speaking-script draft
+Target: about 65–75 seconds total; rehearse at your normal pace.
+
+SLIDE 1 — A filename lost its CSV extension (30–35 seconds)
+
+My issue concerned CSV filenames containing a hash. Tika detected the same CSV bytes as plain text for a name such as Lorem-Ipsum hash one-two-three dot CSV. Its URI parser interpreted everything after the hash as a fragment, as it would in a web address. That left Lorem-Ipsum as the path, without the CSV extension. Preserving the full filename hint restores the expected CSV result.
+
+SLIDE 2 — The fix and its compatibility boundary (35–40 seconds)
+
+The important boundary was real URLs, where the hash really does mark a fragment. The change preserves that behaviour and applies the new handling only to filename-like inputs. Tests also cover query strings and encoded characters. Removing only the production fix caused nine of the thirty-three detection cases to fail. Restoring it made all thirty-three pass. These are local results. The group pull request is open, and Apache submission is still pending. The lesson was to test the compatibility boundary as well as the reported example.
+
+PRONUNCIATION
+# = hash / number sign
+URI = U-R-I
+CSV = C-S-V
+Read text/plain as “plain text” and text/csv as “CSV”.
+
+SOURCE AND SCOPE
+https://github.com/u8026876/comp2120-gyg-a5/pull/7
+https://github.com/u8026876/comp2120-gyg-a5/issues/1
+Recorded local evidence, not a new code test run today. Group PR open; Apache submission pending as checked 25 October 2026.
+
+ASSISTANCE
+Draft prepared with Codex for Kyubin Park. Review the wording in your own voice and retain the relevant AI-assistance attribution with your assessed materials.

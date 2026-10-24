@@ -1,0 +1,58 @@
+Jiajun Li - TIKA-4408
+Simple English speaking script
+
+Slide 1 - Finding the real cause
+
+I will talk about the challenges and lessons from my TIKA-4408 work.
+
+The first challenge was finding the real cause.
+
+Tika uses rules to detect file types. In this case, it read a Python script as a Shell script.
+
+The old rule looked for the highlighted part at position one. But in this line, it starts at position six. So the Python rule did not match.
+
+We changed the rule to check the Python shebang from the start of the file.
+
+The main challenge was understanding how the existing rules worked together.
+
+Slide 2 - Checking the fix
+
+The second challenge was checking that the fix worked without breaking other cases.
+
+We tested different Python scripts and real Shell scripts. We also checked a case with an extra blank line before the shebang.
+
+We tested the file content alone, and then tested it with a filename. This helped us understand how the filename affected the result.
+
+We ran the same eighteen checks before and after the fix.
+
+Before the fix, seven failed. After the fix, all eighteen passed.
+
+These were local test results. They gave us clear evidence that the fix worked for the cases we checked.
+
+Slide 3 - Learning from review
+
+Code review helped us think about another possible mistake.
+
+Terry suggested this example. It is ordinary text.
+
+The letter x is at position zero. The text after it starts at position one, exactly where the old rule looked.
+
+So the old rule could wrongly call this Python. This is a false positive.
+
+Kyubin checked this example separately. The fixed version correctly detected it as plain text.
+
+The example is not yet part of the automated tests. Adding it would help us catch the same mistake in future changes.
+
+Slide 4 - What I would do differently
+
+I learned that even a small fix needs careful testing.
+
+Next time, I would make a list of inputs and expected results earlier.
+
+I would include cases that should match, cases that should not match, and cases with small changes, such as an extra space or blank line.
+
+I would also turn useful review examples into automated tests.
+
+We already reproduced the bug before fixing it. I would keep that approach.
+
+The main improvement would be to think about more ways the rule could go wrong from the beginning.

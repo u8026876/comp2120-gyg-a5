@@ -1,0 +1,28 @@
+Kyubin Park - COMP2120 A4
+Q1 and Q2 speaking scripts
+
+Q1 / SLIDE 1: WHY APACHE TIKA?
+Approx. 50-55 seconds
+
+We started by looking through the recommended repositories. Some of the issues we were interested in already had contributors or proposed fixes, so we broadened our search.
+
+Tika stood out because it's written in Java, which we were already familiar with from the course. Its basic purpose was also easy to understand: identifying file types and extracting text and metadata from documents.
+
+The repository was still active, and we found focused issues that looked manageable for our group. So it gave us a practical starting point where we could understand a specific problem, make a change, and test whether it worked.
+
+Q2 / SLIDE 2: WHY THESE ISSUES?
+Approx. 65-75 seconds
+
+For the issues themselves, we wanted clear problems with a manageable scope and results we could test.
+
+The CSV issue was a good example. A hash in the filename could change the file type Tika reported, so we had a simple way to reproduce the problem and check a fix.
+
+The Python issue also had small examples we could test. Certain Python scripts were being identified as Shell scripts, and we could check the fix alongside normal Python and Shell cases.
+
+For Word documents, the line and paragraph counts were already stored in the file, but Tika wasn't returning them. That meant we could use existing APIs and test the expected output.
+
+We also tracked CDiff detection as an investigation because it had a distinct file signature and sample files.
+
+These gave us focused tasks with enough substance to share the implementation, testing and peer review across the group.
+
+Prepared with Codex. This text matches the speaking scripts in the published Kyubin-Q1-Q2-section.pptx.

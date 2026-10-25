@@ -2,6 +2,25 @@
 
 This is the group's approved warm visual style. Give this folder to Codex or Claude so each member's slides can be assembled into one consistent presentation. A Google account is not required: the PPTX and reference PDF are in this repository.
 
+## Kyubin's final handoff: three main slides
+
+Use these three files, in this order, for Kyubin's main contribution. These numbers identify this handoff; the group may assign different positions in the assembled presentation.
+
+| Order | File | Topic |
+| --- | --- | --- |
+| 1 | [final-draft-slide-1.pptx](final-draft-slide-1.pptx) | Q1: project choice |
+| 2 | [final-draft-slide-2.pptx](final-draft-slide-2.pptx) | Q2: issue choice |
+| 3 | [final-draft-slide-3.pptx](final-draft-slide-3.pptx) | Challenges: defining correct behavior |
+
+[Preview slide 3](final-draft-slide-3-preview.png). Speaking scripts and sources are in the PPTX notes.
+
+The two earlier TIKA-4431 technical slides are optional backups for questions, outside the three-slide main handoff:
+
+- [Problem and before/after behavior](backup-TIKA-4431-problem.pptx)
+- [Fix, compatibility boundary and test evidence](backup-TIKA-4431-fix-and-evidence.pptx)
+
+Other Kyubin section files in this folder are source packages or earlier variants. Use the three numbered files above for the main contribution to avoid duplicate slides.
+
 ## Start here
 
 1. Read [AGENTS.md](AGENTS.md) and [design-tokens.json](design-tokens.json).

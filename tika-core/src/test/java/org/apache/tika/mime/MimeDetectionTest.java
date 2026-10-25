@@ -93,6 +93,16 @@ public class MimeDetectionTest {
         testFile("application/vnd.android.axml", "test-android-binary.xml");
     }
 
+    /**
+     * Test Jenkinsfile name detection. See TIKA-4478.
+     */
+    @Test
+    public void testJenkinsfileNameDetection() throws IOException {
+        testUrlWithoutContent("text/x-groovy", "Jenkinsfile");
+        testUrlWithoutContent("application/octet-stream", "jenkinsfile");
+        testUrlWithoutContent("text/plain", "Jenkinsfile.txt");
+    }
+
     /** The html magic needs the tag to end: an XML element such as htmlPath is not html. */
     @Test
     public void testHtmlMagicNeedsTagEnd() throws Exception {

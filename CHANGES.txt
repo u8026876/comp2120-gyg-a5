@@ -1,6 +1,6 @@
 Release 4.2.0 - unreleased
 
-   * Detect Python 3 scripts with #!/usr/bin/env python3 shebangs as text/x-python
+   * Detect Python scripts with #!/usr/bin/env python shebangs as text/x-python
      instead of application/x-sh (TIKA-4408).
 
    * Config properties whose value reaches the host (paths, executables, class names,

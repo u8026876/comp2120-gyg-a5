@@ -36,6 +36,7 @@ class PythonShebangDetectionTest {
         return Stream.of(
                 Arguments.of("#!/usr/bin/env python", "print('hello')", "text/x-python"),
                 Arguments.of("#!/usr/bin/env python3", "print('hello')", "text/x-python"),
+                Arguments.of("#! /usr/bin/env python3", "print('hello')", "text/x-python"),
                 Arguments.of("#!/usr/bin/env python3.11", "print('hello')", "text/x-python"),
                 Arguments.of("#!/usr/bin/python3", "print('hello')", "text/x-python"),
                 Arguments.of("#!/bin/python3", "print('hello')", "text/x-python"),

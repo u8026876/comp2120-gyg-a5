@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "approved": "2026-10-21",
+  "purpose": "COMP2120 A4 group presentation",
+  "canvas": {
+    "width": 960,
+    "height": 540,
+    "unit": "pt",
+    "aspectRatio": "16:9"
+  },
+  "palette": {
+    "forest": "#203B34",
+    "warmPaper": "#F0E8D9",
+    "terracottaOnDark": "#D99575",
+    "rustOnLight": "#A14F37",
+    "sageTextOnDark": "#B8C7AB",
+    "sageBackground": "#D8DFCE",
+    "mutedTextOnLight": "#52665B"
+  },
+  "typography": {
+    "narrativeFamily": "Manrope",
+    "technicalFamily": "Roboto Mono",
+    "titlePt": [
+      32,
+      36
+    ],
+    "bodyPt": 20,
+    "technicalBodyPt": [
+      19,
+      26
+    ],
+    "heroCodePt": 48,
+    "coverTitlePt": 56,
+    "coverSubtitlePt": 42,
+    "kickerPt": [
+      11,
+      12
+    ],
+    "captionPt": [
+      12.5,
+      16
+    ],
+    "footerPt": [
+      9,
+      12
+    ],
+    "fontSubstitution": "Report a missing font before substitution; preserve source sizes and hierarchy.",
+    "titleWeight": 700,
+    "bodyWeight": 400
+  },
+  "spacing": {
+    "left": 48,
+    "right": 48,
+    "titleY": 65,
+    "normalContentTop": 160,
+    "normalBottom": 496,
+    "footerY": 518
+  },
+  "layouts": [
+    {
+      "name": "cover",
+      "templateSlide": 1,
+      "slideId": "p1",
+      "background": "forest"
+    },
+    {
+      "name": "problem-comparison",
+      "templateSlide": 2,
+      "slideId": "p6",
+      "background": "forest",
+      "paperBand": {
+        "x": 0,
+        "y": 302,
+        "width": 960,
+        "height": 238
+      },
+      "hero": {
+        "x": 48,
+        "y": 180,
+        "width": 864,
+        "height": 83
+      },
+      "comparisonLeftX": 48,
+      "comparisonRightX": 520,
+      "comparisonLabelY": 327,
+      "comparisonBodyY": 368,
+      "resultY": 438,
+      "limitCaptionY": 488
+    },
+    {
+      "name": "decision",
+      "templateSlide": 3,
+      "slideId": "p8",
+      "background": "warmPaper",
+      "rows": [
+        160,
+        242,
+        324,
+        406
+      ],
+      "label": {
+        "x": 48,
+        "width": 278,
+        "fontPt": 16
+      },
+      "body": {
+        "x": 360,
+        "width": 552,
+        "fontPt": 20
+      }
+    },
+    {
+      "name": "evidence",
+      "templateSlide": 4,
+      "slideId": "p9",
+      "background": "forest",
+      "rows": [
+        160,
+        270,
+        380
+      ],
+      "numberX": 48,
+      "headingX": 125,
+      "headingPt": 24,
+      "captionPt": 19
+    },
+    {
+      "name": "explanation-and-evidence",
+      "templateSlide": 5,
+      "slideId": "p5",
+      "background": "warmPaper"
+    },
+    {
+      "name": "demonstration",
+      "templateSlide": 6,
+      "slideId": "p7",
+      "background": "forest"
+    },
+    {
+      "name": "guide",
+      "templateSlide": 7,
+      "slideId": "p11",
+      "background": "sageBackground",
+      "skip": true
+    }
+  ],
+  "semantics": {
+    "warmAccent": "Problematic character or interpretation; do not use as arbitrary decoration.",
+    "onePurposePerSlide": true,
+    "editableNativeText": true
+  },
+  "delivery": {
+    "editable": "pptx",
+    "preview": [
+      "pdf",
+      "png"
+    ],
+    "suggestedTeammateSectionSeconds": 55,
+    "visualInspectionRequired": true
+  }
+}

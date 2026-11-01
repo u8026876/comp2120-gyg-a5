@@ -1,5 +1,10 @@
 # Welcome to Apache Tika <https://tika.apache.org/>
 
+> **COMP2120 A5 group fork:** Read the [group review policy](./A5_REVIEW_POLICY.md)
+> and [agent coordination guidance](./AGENTS.md). One approving review from
+> another human group member is sufficient; no majority or tutor review is
+> required for any issue or contribution.
+
 [![license](https://img.shields.io/github/license/apache/tika.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Jenkins](https://img.shields.io/jenkins/s/https/ci-builds.apache.org/job/Tika/job/tika-main-jdk17.svg?maxAge=3600)](https://ci-builds.apache.org/job/Tika/job/tika-main-jdk17/)
 [![Jenkins tests](https://img.shields.io/jenkins/t/https/ci-builds.apache.org/job/Tika/job/tika-main-jdk17.svg?maxAge=3600)](https://ci-builds.apache.org/job/Tika/job/tika-main-jdk17/lastBuild/testReport/)

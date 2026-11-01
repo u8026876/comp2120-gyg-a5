@@ -12,6 +12,13 @@ body:
         Keep Status current and add progress/handoff comments. Group members and
         agents should read the issue and latest comments before starting or resuming.
         This claim does not reserve an upstream Tika ticket.
+
+        A5 review policy: one approving review from another human group member
+        is sufficient before merging or submitting upstream. Self-review and
+        agent-only checks do not count. No majority or tutor review/approval is
+        required for any issue. Record the reviewer's name, reviewed commit or
+        diff, scope, and outcome in the issue or PR.
+        Current policy: https://github.com/u8026876/comp2120-gyg-a5/blob/main/A5_REVIEW_POLICY.md
   - type: input
     id: owner
     attributes:
@@ -51,10 +58,11 @@ body:
     id: done
     attributes:
       label: Done when
-      description: List observable completion criteria and the tests, review, or other evidence needed.
+      description: List observable completion criteria, actual test results, and one other human group member's approving review. No majority or tutor review is required.
       placeholder: |
         - [ ] Deliverable is ready for review.
         - [ ] Relevant checks and their actual results are linked.
+        - [ ] One other human group member has reviewed and approved the change; the review is linked.
     validations:
       required: true
   - type: textarea

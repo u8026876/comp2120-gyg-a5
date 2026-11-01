@@ -577,6 +577,16 @@ public final class MimeTypes implements Detector, Serializable {
                     URI uri = new URI(resourceName);
                     String scheme = uri.getScheme();
                     isHttp = scheme != null && scheme.startsWith("http"); // http or https
+                    // Scheme-less filenames may contain a literal '#' before the extension.
+                    if (scheme == null && uri.getRawAuthority() == null) {
+                        int query = resourceName.indexOf('?');
+                        int end = query == -1 ? resourceName.length() : query;
+                        int hash = resourceName.lastIndexOf('#', end - 1);
+                        int dot = resourceName.lastIndexOf('.', end - 1);
+                        if (hash >= 0 && hash < dot) {
+                            uri = new URI(resourceName.replace("#", "%23"));
+                        }
+                    }
                     String path = uri.getPath();
                     if (path != null) {
                         int slash = path.lastIndexOf('/');

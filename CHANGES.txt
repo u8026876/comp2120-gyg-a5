@@ -1,5 +1,8 @@
 Release 4.2.0 - unreleased
 
+   * Preserve number signs before extensions in local filename hints during MIME
+     detection (TIKA-4431).
+
    * Detect Python scripts with /usr/bin/env python shebangs as text/x-python
      instead of application/x-sh (TIKA-4408).
 

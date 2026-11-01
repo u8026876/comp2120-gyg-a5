@@ -49,9 +49,6 @@ jobs:
         java: [ '17' ]
 
     steps:
-      - name: Enable Git long paths
-        # System scope also applies while checkout uses a temporary HOME.
-        run: git config --system core.longpaths true
       # The space in this path is deliberate -- it is what catches path-quoting bugs.
       - uses: actions/checkout@v7
         with:

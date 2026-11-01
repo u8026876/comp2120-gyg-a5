@@ -25,16 +25,21 @@ changes out of patches and pull requests intended for Apache Tika.
 ## A5 review policy
 
 Read [A5_REVIEW_POLICY.md](./A5_REVIEW_POLICY.md) when starting or resuming
-work. One approving review from another human group member is sufficient before
-merging a contribution or submitting it upstream. The author cannot approve
-their own work; an agent's checks alone do not count as another human review.
-Record the reviewer, reviewed commit or diff, scope, and outcome in the issue or
-PR. Group PRs may be opened to request that review.
+work. Group PRs may be opened to request review. Before an internal merge,
+obtain at least one other human group member's approving review; self-review
+and agent-only checks do not count.
 
-No majority-group review, tutor review, or tutor approval is required for any A5
-issue or contribution. This policy supersedes older review requirements in
-issues, PRs, comments, handoffs, and chat history. Check the current policy on
-the fork's `main` branch if a feature branch contains older guidance.
+Before opening an official Apache PR, complete the group discussion,
+majority-group review and prior tutor review described in the
+[official A5 brief](https://comp.anu.edu.au/courses/comp2120/assignments/assignment5/).
+Project/issue-selection approval is separate from review of the proposed PR.
+The fork policy cannot waive either course requirement.
+
+Record the reviewer, reviewed commit or diff, scope, outcome, and actual date.
+Preserve historical comments and distinguish missing evidence from completed
+review. Do not backdate approvals or treat a later review as evidence that it
+occurred before submission. Consult the current policy on `main` when a
+feature branch contains older guidance.
 
 ## Before starting or resuming work
 

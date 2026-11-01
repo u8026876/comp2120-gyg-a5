@@ -22,11 +22,14 @@
 ## COMP2120 A5 group fork
 
 For work in `u8026876/comp2120-gyg-a5`, follow the
-[group review policy](./A5_REVIEW_POLICY.md): one approving review from another
-human group member is sufficient before merging or submitting upstream.
-Self-review does not count, and no majority-group review, tutor review, or tutor
-approval is required for any issue or contribution. Record the review in the
-linked issue or PR. A group PR may be opened to request review.
+[group review policy](./A5_REVIEW_POLICY.md). A group PR may be opened to
+request review. Internal merges require at least one other human member's
+approval; self-review and agent-only checks do not count. Official Apache PRs
+also require group discussion, review by at least a majority of the group, and
+tutor review before opening, as set out in the
+[official A5 brief](https://comp.anu.edu.au/courses/comp2120/assignments/assignment5/).
+Record the reviewed change, participants, outcome, and actual dates. The fork
+policy does not waive the course's project-selection or PR-review requirements.
 
 These fork coordination changes stay out of Apache-bound patches. The Apache
 contribution guidance below still applies to upstream contributions.

@@ -1,9 +1,11 @@
 # Welcome to Apache Tika <https://tika.apache.org/>
 
 > **COMP2120 A5 group fork:** Read the [group review policy](./A5_REVIEW_POLICY.md)
-> and [agent coordination guidance](./AGENTS.md). One approving review from
-> another human group member is sufficient; no majority or tutor review is
-> required for any issue or contribution.
+> and [agent coordination guidance](./AGENTS.md). Group PRs may request review;
+> internal merges require at least one other human member's approval. Official
+> Apache PRs also require the group discussion, majority-group review and prior
+> tutor review described in the [A5 brief](https://comp.anu.edu.au/courses/comp2120/assignments/assignment5/).
+> This fork policy cannot waive course requirements.
 
 [![license](https://img.shields.io/github/license/apache/tika.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Jenkins](https://img.shields.io/jenkins/s/https/ci-builds.apache.org/job/Tika/job/tika-main-jdk17.svg?maxAge=3600)](https://ci-builds.apache.org/job/Tika/job/tika-main-jdk17/)

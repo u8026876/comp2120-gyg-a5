@@ -23,15 +23,19 @@ Thanks for your contribution to [Apache Tika](https://tika.apache.org/)! Your he
 
 For this group fork, follow the
 [A5 review policy](https://github.com/u8026876/comp2120-gyg-a5/blob/main/A5_REVIEW_POLICY.md).
-One approving review from another human group member is sufficient before
-merging or submitting upstream. Self-review and agent-only checks do not count.
-No majority-group review, tutor review, or tutor approval is required for any
-issue or contribution. A group PR may be opened to request review.
+A group PR may be opened to request review. Internal merges require at least
+one other human member's approval; self-review and agent-only checks do not
+count. Before opening an official Apache PR, complete group discussion,
+majority-group review and prior tutor review under the
+[official A5 brief](https://comp.anu.edu.au/courses/comp2120/assignments/assignment5/).
+Record actual dates and evidence; this fork policy cannot waive course rules.
 
 - Group issue:
-- Reviewer and link to approval (pending while requesting review):
-- Reviewed commit or diff, scope, and outcome:
-- Tests and quality checks actually run, results, and remaining limitations:
+- Internal reviewer and link to approval (pending while requesting review):
+- Reviewed commit or diff, scope, outcome, and actual review date:
+- Before upstream submission, group discussion and majority review evidence:
+- Before upstream submission, tutor review evidence and actual date:
+- Tests and quality checks actually run, results, dates, and remaining limitations:
 
 ## Apache contribution checklist
 

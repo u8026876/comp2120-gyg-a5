@@ -17,44 +17,68 @@ limitations under the License.
 
 # COMP2120 A5 group review policy
 
-Updated 21 October 2026 following the group repository owner's instructions.
-This policy applies to all A5 issues and contributions in
+Updated 1 November 2026 to align the fork workflow with the
+[official Assignment 5 instructions](https://comp.anu.edu.au/courses/comp2120/assignments/assignment5/).
+
+This policy applies to work in
 [`u8026876/comp2120-gyg-a5`](https://github.com/u8026876/comp2120-gyg-a5).
+It supplements the course requirements; it cannot waive or replace them.
+The 21 October wording that waived majority-group and tutor review was
+incorrect. This dated correction does not establish that any earlier review
+or approval occurred.
 
-## Required review
+## Project and issue selection
 
-One approving review from another human group member is sufficient before a
-contribution is merged or submitted upstream. The author cannot review their
-own work to satisfy this requirement. A majority or unanimous group review is
-not required. Tutor review and tutor approval are not required for any issue or
-contribution.
+The course requires tutor approval of the repository and selected issues
+before assignment work begins. Record the scope and actual timing of that
+confirmation. Approval of the project or issue selection is separate from the
+tutor's review of a proposed upstream PR.
 
-A group PR may be opened to request review; approval is not a prerequisite for
-opening that review request.
+## Group review and internal merge
 
-## Record the review
+A group PR may be opened to request review, with review evidence marked as
+pending. Before merging a contribution into the group fork's `main`, obtain
+at least one approving review from another human group member and address
+blocking findings. The author cannot approve their own work for this purpose.
 
 Use an approving GitHub PR review or an explicit approval in the linked group
-issue or PR. Identify the human reviewer, reviewed commit or diff, what they
-checked, and their outcome. Existing recorded reviews count when they cover the
-change being submitted; a separate formal PR approval is not mandatory.
+issue or PR. Record the reviewer, reviewed commit or diff, scope, outcome, and
+actual review date. Existing reviews may cover an unchanged implementation;
+state what they cover rather than implying approval of later unrelated work.
 
-Reviewers may use an agent to help them understand or test the change. The
-human reviewer remains responsible for the approval. Automated checks or an
-agent-only review do not count as a second person.
+This internal merge rule does not by itself satisfy the requirements for
+opening a PR to Apache Tika.
 
-Relevant tests, quality checks, and any blocking review findings still need to
-be addressed. Report the checks actually run and their limits; local test
-results do not establish remote CI or upstream acceptance.
+## Before an official Apache PR
 
-## Current policy and upstream scope
+Under Activity 3 of the official brief, discuss the proposed contribution with
+the group, ensure at least a majority of the group has looked at it, and have
+the tutor look at it before opening the upstream PR. Record who reviewed the
+proposed change, what they reviewed, and when. A single internal approval,
+automated checks, or earlier project-selection approval does not establish
+that these steps have been completed.
 
-This policy supersedes older references to majority-group review, tutor review,
-or tutor approval in issue/PR descriptions, comments, checklists, handoffs, and
-chat history. Those older records may remain as historical evidence and do not
-add review gates. Members and agents working on older branches should consult
-the [current policy on the group fork's main branch](https://github.com/u8026876/comp2120-gyg-a5/blob/main/A5_REVIEW_POLICY.md).
+Follow Apache Tika's contribution requirements as well. Keep this fork's
+coordination files and coursework documents out of Apache-bound patches.
 
-This is the group's review rule. Apache Tika's contribution requirements and
-maintainer decisions continue to apply upstream. Keep this fork's coordination
-files and documentation changes out of Apache-bound patches and PRs.
+## Evidence and historical records
+
+Reviewers may use an agent to help understand or test a change, but the human
+reviewer remains responsible. Agent-only checks do not count as another human
+reviewer or as tutor review.
+
+Report the tests and quality checks actually run, their dates, and their
+limits. Local test results do not establish remote CI success or upstream
+acceptance. Keep current issue and PR descriptions accurate, and preserve
+dated historical comments.
+
+Record confirmations in the form in which they occurred. Do not turn verbal
+confirmation into an email record, invent dates, or backdate a later review to
+a pre-submission stage. If evidence is unavailable, state that limitation.
+Course correspondence and submission evidence can remain in the assessed
+report rather than being published in this public repository.
+
+The current policy corrects the earlier conflicting fork guidance. Historical
+records remain evidence of what was said at the time; the official course
+instructions and Apache's contribution requirements continue to govern their
+respective scopes.

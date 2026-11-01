@@ -1,5 +1,8 @@
 Release 4.2.0 - unreleased
 
+   * Detect Python scripts with /usr/bin/env python shebangs as text/x-python
+     instead of application/x-sh (TIKA-4408).
+
    * Extract stored line and paragraph counts from legacy Microsoft Word
      (.doc) documents. The existing metadata properties are now populated
      when these values are available in the document (TIKA-4694).
